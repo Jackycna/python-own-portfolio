@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Flutter Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+        <div class="loading-text">Loading Portfolio...</div>
+    </div>
+ 
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Flutter Developer</div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" onclick="showPage('home'); closeMenu();" class="nav-link active">Home</a></li>
+                <li><a href="#" onclick="showPage('about'); closeMenu();" class="nav-link">About</a></li>
+                <li><a href="#" onclick="showPage('skills'); closeMenu();" class="nav-link">Skills</a></li>
+                <li><a href="#" onclick="showPage('projects'); closeMenu();" class="nav-link">Projects</a></li>
+                <li><a href="#" onclick="showPage('contact'); closeMenu();" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div class="page active" id="home">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Flutter Developer</span>
+                    
+                </h1>
+                <p class="hero-subtitle">
+                    Building responsive mobile applications with Flutter and Fastapi.
+                </p>
+                <p class="hero-description">
+                    Bringing comlex ideas into working projects.
+                </p>
+                <div class="hero-cta">
+                    <a href="#" onclick="showPage('projects')" class="btn btn-primary">
+                        <i class="fas fa-code"></i>
+                        View My Work
+                    </a>
+                    <a href="#" onclick="showPage('contact')" class="btn btn-secondary">
+                        <i class="fas fa-coffee"></i>
+                        Let's Chat
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About -->
+    <div class="page" id="about">
+        <section class="who-am-i-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Who Am I?</h2>
+                    <p class="section-subtitle">A passionate developer on a mission to merge traditional development with AI innovation</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h3>The Journey So Far</h3>
+                        <p>
+                            I'm a <span class="highlight-text">fullstack developer</span> with 9 years of experience who has evolved from building traditional web applications to creating <span class="highlight-text">AI-powered solutions</span>. My journey started with PHP and has led me through the entire modern tech stack.
+                        </p>
+                        <p>
+                            Currently working at <span class="highlight-text">Cognizant</span> as an SRE and Fullstack Engineer for banking clients, where I combine my traditional development skills with cutting-edge AI technologies, particularly <span class="highlight-text">RAG applications</span>.
+                        </p>
+                        <p>
+                            What drives me? The excitement of solving complex problems and the endless possibilities that AI brings to everyday applications. I believe the future belongs to developers who can seamlessly blend traditional engineering with AI capabilities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- SKILLS PAGE -->
+    <div class="page" id="skills">
+        <section class="skills-section">
+            <div class="skills-container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Arsenal</h2>
+                    <p class="section-subtitle">A comprehensive toolkit spanning traditional development to cutting-edge AI</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="skill-title">Frontend Skills</div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Dart</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">React(basic)</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="skill-title">Backend Excellence</div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">Microservices</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-title">Databases</div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Postgres</span>
+                            <span class="skill-tag">Firebase Realtime Database</span>
+                            <span class="skill-tag">Firebase Firestore</span>
+                            <span class="skill-tag">Sqlite</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="skill-title">Integration & Tools</div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Razorpay</span>
+                            <span class="skill-tag">Cashfree</span>
+                            <span class="skill-tag">Google Ads</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">Rest Api</span>
+                            <span class="skill-tag">JSON</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- PROJECTS PAGE -->
+    <div class="page" id="projects">
+        <section class="projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Showcasing innovation across industries and technologies</p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">E-commerce Application</h3>
+                            <p class="project-description">
+                                Built a fish selling application with three modules such as user,owner,delivery integrated with Razorpay payment gateway.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Dart</span>
+                                <span class="tech-badge">Flutter</span>
+                                <span class="tech-badge">Sqlite</span>
+                                <span class="tech-badge">Razorpay</span>
+                                <span class="tech-badge">Goole Maps</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Calender Application</h3>
+                            <p class="project-description">
+                                Developed a calender application from scratch with google ads , Ai chat and attractive ui with responsive. 
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Dart</span>
+                                <span class="tech-badge">Flutter</span>
+                                <span class="tech-badge">Getit</span>
+                                <span class="tech-badge">Bloc</span>
+                                <span class="tech-badge">Clean Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Employee Portal</h3>
+                            <p class="project-description">
+                                Developed responsive employe portal appllication with attractive ui where employees can apply leave and track there daily work status.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Dart</span>
+                                <span class="tech-badge">Flutter</span>
+                                <span class="tech-badge">Bloc</span>
+                                <span class="tech-badge">Clean Architecture</span>
+                                <span class="tech-badge">Getit</span>
+                                <span class="tech-badge">FlChart</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div class="page" id="contact">
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="section-header">
+                    <h2 class="section-title">Let's Build Something Amazing</h2>
+                    <p class="section-subtitle">Ready to discuss your next intelligent application?</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>
+                            Whether you're looking to build a traditional web application, integrate AI capabilities, or need consultation on modern development practices, I'm here to help bring your vision to life.
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong><br>
+                                    <span style="color: var(--text-muted);">your.email@example.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <strong>LinkedIn</strong><br>
+                                    <span style="color: var(--text-muted);">Connect professionally</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <strong>GitHub</strong><br>
+                                    <span style="color: var(--text-muted);">Explore my code</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone</strong><br>
+                                    <span style="color: var(--text-muted);">Available for calls</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-leetcode"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-input" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Project Type</label>
+                                <select class="form-input" required>
+                                    <option value="">Select project type</option>
+                                    <option value="iOS">iOS Application</option>
+                                    <option value="android">Android Application</option>
+                                    <option value="Web">Web Application</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-input form-textarea" placeholder="Tell me about your project vision, timeline, and goals..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loadingScreen').style.display = 'none';
+                    initializeAnimations();
+                }, 500);
+            }, 2000);
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        }
+        
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+        
+        menuToggle.addEventListener('click', toggleMenu);
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = navMenu.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+
+        // Navigation System
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Remove active class from nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Add active class to clicked nav link
+            event.target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+
+            // Trigger page-specific animations
+            triggerPageAnimations(pageId);
+        }
+
+
+
+            // Stagger timeline animations
+            const timelineObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 200);
+                    }
+                });
+            });
+
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(50px)';
+                item.style.transition = 'all 0.8s ease';
+                timelineObserver.observe(item);
+            });
+
+            // Animate skill categories
+            const skillsObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 150);
+                    }
+                });
+            });
+
+            document.querySelectorAll('.skill-category').forEach(category => {
+                category.style.opacity = '0';
+                category.style.transform = 'translateY(30px)';
+                category.style.transition = 'all 0.6s ease';
+                skillsObserver.observe(category);
+            });
+        
+
+        // Page-specific animations
+        function triggerPageAnimations(pageId) {
+            if (pageId === 'home') {
+                // Reset and trigger hero animations
+                const heroElements = document.querySelectorAll('.hero-badge, .hero-title span, .hero-subtitle, .hero-description, .hero-cta');
+                heroElements.forEach((el, index) => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(30px)';
+                    setTimeout(() => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                        el.style.transition = 'all 0.8s ease';
+                    }, index * 200);
+                });
+            }
+        }
+
+       
+
+        // Create particles periodically
+        setInterval(createParticle, 3000);
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            btn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                btn.style.background = 'linear-gradient(45deg, var(--green), #16a34a)';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = 'linear-gradient(45deg, var(--primary), var(--secondary))';
+                    btn.disabled = false;
+                    this.reset();
+                }, 3000);
+            }, 2000);
+        });
+
+        // Smooth hover effects for interactive elements
+        document.querySelectorAll('.service-card, .project-card, .skill-category').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Enhanced click effects
+        document.addEventListener('click', function(e) {
+            createClickEffect(e.clientX, e.clientY);
+        });
+
+        function createClickEffect(x, y) {
+            for (let i = 0; i < 8; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'fixed';
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                particle.style.width = '6px';
+                particle.style.height = '6px';
+                particle.style.background = 'var(--primary)';
+                particle.style.borderRadius = '50%';
+                particle.style.pointerEvents = 'none';
+                particle.style.zIndex = '9999';
+                
+                document.body.appendChild(particle);
+                
+                const angle = (Math.PI * 2 * i) / 8;
+                const velocity = 150;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity;
+                
+                let startTime = performance.now();
+                
+                function animateParticle(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = elapsed / 1000;
+                    
+                    if (progress < 1) {
+                        const newX = x + vx * progress;
+                        const newY = y + vy * progress + 0.5 * 300 * progress * progress;
+                        
+                        particle.style.left = newX + 'px';
+                        particle.style.top = newY + 'px';
+                        particle.style.opacity = 1 - progress;
+                        particle.style.transform = `scale(${1 - progress * 0.5})`;
+                        
+                        requestAnimationFrame(animateParticle);
+                    } else {
+                        particle.remove();
+                    }
+                }
+                
+                requestAnimationFrame(animateParticle);
+            }
+        }
+
+        // Neural network animation
+        function animateNeuralNetwork() {
+            const nodes = document.querySelectorAll('.neural-node');
+            nodes.forEach((node, index) => {
+                setTimeout(() => {
+                    node.style.animationDelay = index * 0.3 + 's';
+                }, index * 100);
+            });
+        }
+
+        // Initialize neural network when AI page is viewed
+        const aiObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateNeuralNetwork();
+                }
+            });
+        });
+
+        document.querySelector('.neural-network') && aiObserver.observe(document.querySelector('.neural-network'));
+
+        // Typing effect for code window
+        function typeCode() {
+            const codeLines = document.querySelectorAll('.code-line');
+            codeLines.forEach((line, index) => {
+                line.style.opacity = '0';
+                setTimeout(() => {
+                    line.style.opacity = '1';
+                    line.style.animation = 'fadeIn 0.5s ease';
+                }, index * 300);
+            });
+        }
+
+        // Trigger typing effect when about page is viewed
+        const codeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typeCode();
+                }
+            });
+        });
+
+        document.querySelector('.code-window') && codeObserver.observe(document.querySelector('.code-window'));
+
+        // Enhanced scroll animations
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Apply scroll animations to various elements
+        document.querySelectorAll('.service-card, .project-card, .ai-feature').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(50px)';
+            element.style.transition = 'all 0.8s ease';
+            scrollObserver.observe(element);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                // Close any open modals or return to home
+                showPage('home');
+                closeMenu();
+            }
+        });
+
+        // Performance optimization - lazy load animations
+        const animationObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Initialize performance optimizations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Preload critical animations
+            requestIdleCallback(() => {
+                initializeAnimations();
+            });
+        });
+    </script>
+</body>
+</html>

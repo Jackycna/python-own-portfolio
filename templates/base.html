@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dynamic title here   -->
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('assets',path='css/output.css')}}">
+
+</head>
+<body>
+     <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Flutter Developer</div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" class="nav-link {% if page=='home' %}active{% endif %}">Home</a></li>
+                <li><a href="/about" class="nav-link {% if page=='about' %}active{% endif %}">About</a></li>
+                <li><a href="/skills" class="nav-link {% if page=='skills' %}active{% endif %}">Skills</a></li>
+                <li><a href="/projects" class="nav-link {% if page=='projects' %}active{% endif %}">Projects</a></li>
+                <li><a href="/contact" class="nav-link {% if page=='contact' %}active{% endif %}">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% block content %} {% endblock %}
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        }
+        
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+        
+        menuToggle.addEventListener('click', toggleMenu);
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = navMenu.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    </script>
+</body>
+</html>

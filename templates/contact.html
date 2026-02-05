@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %} Contact {% endblock %}
+{% block content %}
+ <div class="page active" id="contact">
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="section-header">
+                    <h2 class="section-title">Let's Work Together</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Connect With Me</h3>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong><br>
+                                    <span style="color: var(--text-muted);">jackycnaa@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <strong>LinkedIn</strong><br>
+                                    <span style="color: var(--text-muted);">Let's Connect professionally</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <strong>GitHub</strong><br>
+                                    <span style="color: var(--text-muted);">Explore my code</span>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone</strong><br>
+                                    <span style="color: var(--text-muted);">Available for professional discussions +919344091532</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/jackson-26b793322?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Jackycna" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="https://leetcode.com/u/Jackycna/" class="social-link"><i class="fas fa-code"></i></a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="contactForm" method="post" action="https://formspree.io/f/mgolwkwj">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" name="name" class="form-input" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Project Type</label>
+                                <select name="project_type" class="form-input" required>
+                                    <option value="">Select project type</option>
+                                    <option value="iOS">iOS Application</option>
+                                    <option value="android">Android Application</option>
+                                    <option value="Web">Web Application</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea name="message" class="form-input form-textarea" placeholder="Tell me about your project" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

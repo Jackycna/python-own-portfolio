@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+ <div class="page active" id="home">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Flutter Developer</span>
+                    
+                </h1>
+                <p class="hero-subtitle">
+                    I build responsive mobile applications with Flutter and Fastapi.
+                </p>
+                <p class="hero-description">
+                    I enjoy turning complex ideas into clean, reliable, real-world products.
+                </p>
+                <div class="hero-cta">
+                    <a href="/projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i>
+                        View My Work
+                    </a>
+                    <a href="/contact" class="btn btn-secondary">
+                        <i class="fas fa-coffee"></i>
+                        Let's Chat
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
